@@ -1,13 +1,42 @@
-# Node / React Native
+# --- Node / React Native ---
 node_modules/
 .expo/
-npm-debug.log
+dist/
+web-build/
+expo-env.d.ts
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+metro-health-check*
 
-# .NET
+# Native build stuff
+/ios
+/android
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# --- .NET ---
 bin/
 obj/
 *.exe
 *.dll
 
-# VS Code
+# --- Environment files ---
+.env
+.env*.local
+*.tsbuildinfo
+
+# --- macOS ---
+.DS_Store
+*.pem
+
+# --- VS Code ---
 .vscode/
+
+# --- Misc ---
+app-example
