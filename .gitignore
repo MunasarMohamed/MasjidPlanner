@@ -1,0 +1,13 @@
+# Node / React Native
+node_modules/
+.expo/
+npm-debug.log
+
+# .NET
+bin/
+obj/
+*.exe
+*.dll
+
+# VS Code
+.vscode/
