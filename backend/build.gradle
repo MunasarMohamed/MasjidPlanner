@@ -19,10 +19,33 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	developmentOnly("org.springframework.boot:spring-boot-devtools") // For automatic restart upon file change
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    developmentOnly("org.springframework.boot:spring-boot-devtools") // For automatic restart upon file change
+    
+    // 1. Spring Security (Authentication & Authorization)
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    
+    // 2. Spring Data JPA (Database Access)
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    
+    // 3. PostgreSQL Driver (Database Connectivity)
+    runtimeOnly 'org.postgresql:postgresql'
+    
+    // 4. Java Mail Sender (Email functionality)
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+    
+    // 5. Lombok (Reduces Boilerplate Code)
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+
+	// JWT (JSON Web Tokens for secure data transmission)
+	implementation 'io.jsonwebtoken:jjwt-api:0.12.3'
+    implementation 'io.jsonwebtoken:jjwt-impl:0.12.3'
+    implementation 'io.jsonwebtoken:jjwt-jackson:0.12.3'
 }
 
 tasks.named('test') {
