@@ -32,6 +32,7 @@ dependencies {
     
     // 3. PostgreSQL Driver (Database Connectivity)
     runtimeOnly 'org.postgresql:postgresql'
+	implementation 'org.postgresql:postgresql:42.6.0'
     
     // 4. Java Mail Sender (Email functionality)
     implementation 'org.springframework.boot:spring-boot-starter-mail'
@@ -44,8 +45,13 @@ dependencies {
 
 	// JWT (JSON Web Tokens for secure data transmission)
 	implementation 'io.jsonwebtoken:jjwt-api:0.12.3'
-    implementation 'io.jsonwebtoken:jjwt-impl:0.12.3'
+    implementation 'io.jsonwebtoken:jjwt-impl:0.12.3'     
     implementation 'io.jsonwebtoken:jjwt-jackson:0.12.3'
+
+	// H2 for tests (in-memory DB)
+	runtimeOnly 'com.h2database:h2'
+	testRuntimeOnly 'com.h2database:h2:2.1.214'
+
 }
 
 tasks.named('test') {
